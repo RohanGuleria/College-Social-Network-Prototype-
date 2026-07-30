@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Post</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar bg-body-light navbar-expand-lg shadow py-2 px-3">
+  <a class="navbar-brand fw-bold" href="#"><b>CliqNet</b></a>
+  <div class="ms-auto gap-2">
+    <a class="btn btn-light rounded-pill px-3" href="feed.php">Feed</a>
+    <a class="btn btn-dark rounded-pill px-3" href="logout.php">Logout</a>
+  </div>
+</nav>
+
+<div class="container text-center mt-5">
+  <h2>Create a Post</h2>
+  <p>Upload an image and share your thoughts</p>
+</div>
+
+<div class="container w-50 mt-4">
+  <form action="upload_post.php" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label class="form-label">Upload Image</label>
+      <input type="file" class="form-control" name="post_image" accept="image/*" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Caption</label>
+      <textarea class="form-control" name="caption" rows="3" placeholder="Write a caption..." required></textarea>
+    </div>
+    <div class="d-grid gap-2">
+      <input class="btn btn-dark" type="submit" value="Post">
+    </div>
+  </form>
+</div>
+
+<footer class="bg-light py-5 mt-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <h5 class="fw-bold">CliqNet</h5>
+              <p class="text-muted">Connect. Create. Collaborate.</p>
+          </div>
+          <div class="col-md-2">
+              <h6 class="fw-bold">Platform</h6>
+              <ul class="list-unstyled text-muted">
+                  <li><a href="#" class="text-decoration-none text-muted">Features</a></li>
+                  <li><a href="#" class="text-decoration-none text-muted">Pricing</a></li>
+                  <li><a href="#" class="text-decoration-none text-muted">FAQ</a></li>
+              </ul>
+          </div>
+          <div class="col-md-2">
+              <h6 class="fw-bold">Company</h6>
+              <ul class="list-unstyled text-muted">
+                  <li><a href="#" class="text-decoration-none text-muted">About</a></li>
+                  <li><a href="#" class="text-decoration-none text-muted">Blog</a></li>
+                  <li><a href="#" class="text-decoration-none text-muted">Careers</a></li>
+              </ul>
+          </div>
+          <div class="col-md-2">
+              <h6 class="fw-bold">Legal</h6>
+              <ul class="list-unstyled text-muted">
+                  <li><a href="#" class="text-decoration-none text-muted">Terms</a></li>
+                  <li><a href="#" class="text-decoration-none text-muted">Privacy</a></li>
+                  <li><a href="#" class="text-decoration-none text-muted">Cookies</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="text-center mt-4 text-muted">
+          &copy; 2025 CliqNet. All rights reserved.
+      </div>
+  </div>
+</footer>
+
+<script src="css/bootstrap.bundle.js"></script>
+</body>
+</html>
